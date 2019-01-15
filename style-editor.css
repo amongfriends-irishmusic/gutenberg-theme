@@ -769,3 +769,58 @@ ul.wp-block-archives li ul,
 .wp-block[data-type="core/freeform"] .mce-btn i {
   font-family: dashicons !important;
 }
+
+
+
+
+
+/* twentynineteen/style-editor.css pasted verbatim above because
+ * Gutenberg (in Wordpress 5) rewrites the CSS found in this
+ * file, but doesn't consider @includes. This looks like a bug
+ * in Gutenberg. The code above was copied from Twenty Nineteen
+ * version 1.2 on 2019-01-14.
+ */
+
+/*******************************************************************/
+
+.editor-default-block-appender .editor-default-block-appender__content,
+html, body, p {
+  font-size: 18px;
+}
+
+body {
+  line-height: 1.6;
+  background-color: #fbf3e3;
+  color: #008000;
+}
+
+.editor-post-title__block .editor-post-title__input,
+h2 {
+  font-size: 1em;
+}
+
+/*
+@media only screen and (min-width: 768px) {
+  .editor-post-title__block .editor-post-title__input,
+  h2 {
+    font-size: 1em;
+  }
+}
+*/
+
+h1:not(.site-title):before,
+h2:before {
+  background-color: inherit;
+  margin-top: 2rem;
+}
+
+/* Support for clearing Gutenberg floats. Unfortunately this CSS makes
+ * this functionality wedded to the theme, resulting in breaking layout
+ * when the theme is switched. If we keep this, we should add it to our
+ * plug-in instead. See also:
+ * https://github.com/WordPress/gutenberg/issues/4127
+ */
+.clear-left {
+	clear: left;
+}
+

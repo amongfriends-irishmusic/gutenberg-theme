@@ -1,0 +1,169 @@
+/*
+Theme Name: Among Friends Gutenberg
+Description: Das erste Redesign für Among Friends. Erstellt 2019 von Arne Johannessen nach Design-Vorlagen von Hinrich Michel. Das WordPress-Theme basiert auf Twenty Nineteen. Das Plug-in "Among Friends" sollte aktiviert werden.
+Author: Arne Johannessen
+Version: 2.0-alpha
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Template: twentynineteen
+*/
+
+@import url(../twentynineteen/style.css);
+
+
+
+/***** changes to twentynineteen css *****/
+
+/* Unfortunately, Twenty Nineteen has evidently been developed with
+ * absolutely zero consideration to child themes. In particular, Twenty
+ * Nineteen uses SASS variables extensively so that the child theme needs
+ * to make simple changes not just in one or two CSS rules, but all over
+ * the place. Additionally, the Twenty Nineteen style sheets are not
+ * well-structured and contain plenty of comments that are simply wrong,
+ * which again is unfortunate for a theme that was apparently supposed to
+ * showcase the project Gutenberg. One can only hope that Gutenberg will
+ * eventually evolve to be more conductive to theme reusability.
+ */
+
+html {
+	font-size: 18px;
+}
+
+body {
+	line-height: 1.6;
+/*
+	background-color: #ebf1de;
+	color: #4f6228;
+*/
+	background-color: #fbf3e3;
+	color: #008000;
+}
+
+.entry-title,
+.not-found .page-title,
+.error-404 .page-title,
+.has-larger-font-size,
+h2 {
+	font-size: 1em;
+}
+
+/*
+@media only screen and (min-width: 768px) {
+	.entry-title,
+	.not-found .page-title,
+	.error-404 .page-title,
+	.has-larger-font-size,
+	h2 {
+		font-size: 1em;
+	}
+}
+*/
+
+h1:not(.site-title):before,
+h2:before {
+	background-color: inherit;
+	margin-top: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+	.site-header.featured-image {
+		min-height: 14em;
+		height: 50vh;
+	}
+}
+.site-header.featured-image {
+	min-height: 14em;
+	height: 50vh;
+}
+
+.entry {
+	margin-top: 0;
+}
+/*
+.entry .entry-header {
+	margin: calc(3 * 1rem) 1rem 1rem;
+	position: relative;
+}
+@media only screen and (min-width: 768px) {
+	.entry .entry-header {
+		margin: calc(3 * 1rem) calc(10% + 60px) 1rem;
+	}
+}
+@media only screen and (min-width: 768px) {
+	.hfeed .entry .entry-header {
+		margin: calc(3 * 1rem) calc(10% + 60px) calc(1rem / 2);
+	}
+}
+*/
+
+
+
+/***** af special handling *****/
+
+.archive.category-performances main>header {
+	display: none;
+}
+.archive.category-performances footer.entry-footer {
+	display: none;
+}
+.archive.category-performances .entry .entry-title:before {
+	width: 100%;
+	background: #a8cd98;
+	height: 2px;
+}
+
+@media only screen and (min-width: 768px) {
+	.site-branding .site-title {
+		float: left;
+		padding-right: 1em;
+	}
+}
+.site-header.featured-image:after {
+	opacity: 0.25;
+}
+
+.site-title img {
+	height: 1.5em;
+}
+
+/* Support for clearing Gutenberg floats. Unfortunately this CSS makes
+ * this functionality wedded to the theme, resulting in breaking layout
+ * when the theme is switched. If we keep this, we should add it to our
+ * plug-in instead. See also:
+ * https://github.com/WordPress/gutenberg/issues/4127
+ */
+.clear-left {
+	clear: left;
+}
+
+
+
+/***** af shortcode *****/
+
+@media only screen and (min-width: 768px) {
+	.af_upcoming_performances .ivycat-post {
+		width: 28%;
+		margin-right: 5%;
+		float: left;
+		-outline: 1px solid red;
+		-webkit-hyphens: auto;
+	}
+	.af_upcoming_performances:after {
+		clear: left;
+		display: block;
+		content: ' ';
+		height: 0;
+		width: 0;
+	}
+	.af_upcoming_performances .ivycat-post>.entry-summary>*:last-child {
+		margin-bottom: 0;
+	}
+	.af_upcoming_performances .ivycat-post>.entry-summary p {
+		hyphens: auto;
+		text-align: justify;
+	}
+}
+.af_upcoming_performances .ivycat-post>.entry-utility {
+	display: none;
+}
+
