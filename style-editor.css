@@ -18,9 +18,12 @@ Twenty Nineteen Editor Styles
 /* If we add the border using a regular CSS border, it won't look good on non-retina devices,
  * since its edges can look jagged due to lack of antialiasing. In this case, we are several
  * layers of box-shadow to add the border visually, which will render the border smoother. */
-/* Fallback for non-latin fonts */
 /* Calculates maximum width for post content */
 /* Nested sub-menu padding: 10 levels deep */
+/* Ensure all font family declarations come with non-latin fallbacks */
+/* Build our non-latin font styles */
+/* (non-latin font styles and fallbacks omitted for Among Friends to keep the file size under control) */
+
 /** === Editor Frame === */
 body .wp-block[data-align="full"] {
   width: 100%;
@@ -412,7 +415,8 @@ figcaption,
 
 /** === Blockquote === */
 .wp-block-quote:not(.is-large):not(.is-style-large) {
-  border-left: 2px solid #0073aa;
+  border-width: 2px;
+  border-color: #0073aa;
 }
 
 .wp-block-quote.is-large, .wp-block-quote.is-style-large {
@@ -765,11 +769,6 @@ ul.wp-block-archives li ul,
   color: #767676;
 }
 
-/* Make sure our non-latin font overrides don't overwrite the iconfont used in the classic editor toolbar */
-.wp-block[data-type="core/freeform"] .mce-btn i {
-  font-family: dashicons !important;
-}
-
 
 
 
@@ -778,7 +777,7 @@ ul.wp-block-archives li ul,
  * Gutenberg (in Wordpress 5) rewrites the CSS found in this
  * file, but doesn't consider @includes. This looks like a bug
  * in Gutenberg. The code above was copied from Twenty Nineteen
- * version 1.2 on 2019-01-14.
+ * version 1.4 on 2019-06-17.
  */
 
 /*******************************************************************/
