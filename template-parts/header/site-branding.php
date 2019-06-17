@@ -17,7 +17,7 @@
 		<?php #if ( is_front_page() && is_home() ) : ?>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php
 if (strcasecmp($blog_info, 'Among Friends') == 0) {
-	?><img src="<?php echo get_stylesheet_directory_uri(); ?>/amongfriends.gif" alt="among friends"><?php
+	?><img src="<?php echo get_stylesheet_directory_uri(); ?>/amongfriends.png" alt="among friends"><?php
 }
 			?></a></h1>
 		<?php #else : ?><!--

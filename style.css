@@ -120,7 +120,15 @@ h2:before {
 }
 
 .site-title img {
-	height: 1.5em;
+	height: 1.6em;
+}
+.main-navigation {
+	padding-top: .1rem;
+}
+header:not(.featured-image) .site-title:hover img {
+	/* not quite the correct effect, but it's a start */
+	-webkit-filter: saturate(.5);
+	filter: saturate(.5);
 }
 
 /* Support for clearing Gutenberg floats. Unfortunately this CSS makes
