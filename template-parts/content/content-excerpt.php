@@ -39,7 +39,7 @@
 		$af_post_content = preg_replace('{\s*</p>\s*<!--\s+/wp:paragraph\s+-->\s*$}i', '', $af_post_content);
 		$af_excerpt_more = $af_post_content != trim(get_the_excerpt());
 		if ($af_excerpt_more) {
-			?><a href="<?php echo esc_url( get_permalink() ); ?>">➡️ mehr Informationen …</a><?php
+			?><a href="<?php echo esc_url( get_permalink() ); ?>">➡️ <span class=more-info>mehr Informationen …</span></a><?php
 		}
 		?>
 	</footer><!-- .entry-footer -->

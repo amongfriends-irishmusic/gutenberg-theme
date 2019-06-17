@@ -79,22 +79,30 @@ h2:before {
 .entry {
 	margin-top: 0;
 }
-/*
-.entry .entry-header {
-	margin: calc(3 * 1rem) 1rem 1rem;
-	position: relative;
+.archive .entry .entry-content > * ,
+.archive .entry .entry-summary > * {
+	margin: 1rem 0 0 !important;
 }
-@media only screen and (min-width: 768px) {
-	.entry .entry-header {
-		margin: calc(3 * 1rem) calc(10% + 60px) 1rem;
-	}
+.archive .entry .entry-footer {
+	margin-top: 1rem !important;
+	margin-bottom: 2.5rem !important;
 }
-@media only screen and (min-width: 768px) {
-	.hfeed .entry .entry-header {
-		margin: calc(3 * 1rem) calc(10% + 60px) calc(1rem / 2);
-	}
+.archive.category-performances .entry .entry-header {
+	margin-top: 2.5rem !important;
+	margin-bottom: .5rem !important;
 }
-*/
+
+.entry .entry-title a:hover {
+	color: #004d00;
+}
+.entry .entry-footer a span.more-info {
+	color: #00A800;
+	text-decoration: underline;
+}
+.entry .entry-footer a:hover span.more-info {
+	color: #008000;
+	text-decoration: none;
+}
 
 
 
@@ -103,6 +111,20 @@ h2:before {
 .archive.category-performances main>header {
 	display: none;
 }
+.archive.category-performances main:before {
+	content: 'Auftritte';
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	font-weight: 700;
+	display: block;
+	position: relative;
+	left: 1rem;
+}
+@media only screen and (min-width: 768px) {
+	.archive.category-performances main:before {
+		left: calc(10% + 60px);
+	}
+}
+
 .archive.category-performances .entry .entry-title:before {
 	width: 100%;
 	background: #a8cd98;
