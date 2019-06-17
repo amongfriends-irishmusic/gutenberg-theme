@@ -103,9 +103,6 @@ h2:before {
 .archive.category-performances main>header {
 	display: none;
 }
-.archive.category-performances footer.entry-footer {
-	display: none;
-}
 .archive.category-performances .entry .entry-title:before {
 	width: 100%;
 	background: #a8cd98;

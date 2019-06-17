@@ -28,6 +28,19 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php twentynineteen_entry_footer(); ?>
+		<?php
+		# Show an explicit link to the post content unless the excerpt
+		# and the content are identical. In particular, they are treated
+		# as identical if they are both empty or if there is just a single
+		# paragraph in the Block editor, without any hyperlinks or other
+		# child elements.
+		$af_post_content = get_post()->post_content;
+		$af_post_content = preg_replace('{^\s*<!--\s+wp:paragraph\s+-->\s*<p>\s*}i', '', $af_post_content);
+		$af_post_content = preg_replace('{\s*</p>\s*<!--\s+/wp:paragraph\s+-->\s*$}i', '', $af_post_content);
+		$af_excerpt_more = $af_post_content != trim(get_the_excerpt());
+		if ($af_excerpt_more) {
+			?><a href="<?php echo esc_url( get_permalink() ); ?>">➡️ mehr Informationen …</a><?php
+		}
+		?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
