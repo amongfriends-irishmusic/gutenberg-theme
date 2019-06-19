@@ -2,7 +2,8 @@
 Theme Name: Among Friends Gutenberg
 Description: Das erste Redesign für Among Friends. Erstellt 2019 von Arne Johannessen nach Design-Vorlagen von Hinrich Michel. Das WordPress-Theme basiert auf Twenty Nineteen. Das Plug-in "Among Friends" sollte aktiviert werden.
 Author: Arne Johannessen
-Version: 2.0-alpha
+Author URI: https://github.com/johannessen
+Version: 2.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Template: twentynineteen
@@ -23,6 +24,7 @@ Template: twentynineteen
  * which again is unfortunate for a theme that was apparently supposed to
  * showcase the project Gutenberg. One can only hope that Gutenberg will
  * eventually evolve to be more conductive to theme reusability.
+ * -aj, January 2019
  */
 
 html {
@@ -31,10 +33,6 @@ html {
 
 body {
 	line-height: 1.6;
-/*
-	background-color: #ebf1de;
-	color: #4f6228;
-*/
 	background-color: #fbf3e3;
 	color: #008000;
 }
@@ -46,18 +44,6 @@ body {
 h2 {
 	font-size: 1em;
 }
-
-/*
-@media only screen and (min-width: 768px) {
-	.entry-title,
-	.not-found .page-title,
-	.error-404 .page-title,
-	.has-larger-font-size,
-	h2 {
-		font-size: 1em;
-	}
-}
-*/
 
 h1:not(.site-title):before,
 h2:before {
