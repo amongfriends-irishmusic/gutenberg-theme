@@ -84,10 +84,18 @@ To Do
   not included in the header menu proper, which results in an incomplete
   main menu in *other* themes)
 - Fix `:hover` effect for AF logo in custom site branding
-- Improve presentation of `af_upcoming` in cases where there are just one
-  or two announcements (low priority, because the editor can always make
-  a manual announcement if they desire)
 - Hide disabled template parts from HTML output (esp. in footer, possibly
   also in posts_loop)
 - Try to rework style sheet for improved resilience when faced with changes
   in Twenty Nineteen – is that worth it, though?
+
+
+Changelog
+---------
+
+2.0.1, 2022-02-21
+- The `af_upcoming` boxes use more of the available screen width in cases
+  where there are just one or two announcements
+
+2.0.0, 2019-06-19
+- publication of first non-beta version
